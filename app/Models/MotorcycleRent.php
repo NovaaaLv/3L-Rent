@@ -15,5 +15,6 @@ class MotorcycleRent extends Model
         'transmisi',
         'engine_displacement',
         'fuel_capacity',
+        'type'
     ];
 }

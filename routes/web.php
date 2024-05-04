@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class);
 Route::get('/landingpage', HomeController::class)->name('landingpage');
 Route::get('/dashboard', HomeController::class)->name('landingpage');
+Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
 
 Route::middleware([
     'auth:sanctum',

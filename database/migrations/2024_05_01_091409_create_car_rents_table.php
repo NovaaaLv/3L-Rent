@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('transmisi');
             $table->string('fuel');
             $table->string('insurance');
+            $table->string('type');
             $table->timestamps();
         });
     }

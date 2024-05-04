@@ -16,5 +16,6 @@ class CarRent extends Model
         'car_trunk',
         'transmisi',
         'fuel',
+        'type'
     ];
 }

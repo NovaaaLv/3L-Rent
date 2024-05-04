@@ -24,7 +24,8 @@ class CarRentFactory extends Factory
             'car_trunk' => $this->faker->numberBetween(1, 2),
             'transmisi' => $this->faker->randomElement(['Auto', 'Manually']),
             'fuel' => $this->faker->randomElement(['Bensin', 'Solar', 'Bio Solar', 'Pertamax', 'Pertalite']),
-            'insurance' => $this->faker->boolean() ? 'Ya' : 'Tidak'
+            'insurance' => $this->faker->boolean() ? 'Ya' : 'Tidak',
+            'type' => $this->faker->randomElement(['Vehicle', 'Clothes'])
         ];
     }
 }

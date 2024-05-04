@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('engine_displacement');
             // cc
             $table->string('fuel_capacity');
+            $table->string('type');
             // nanti ditambahkan fasilitas beda table
             $table->timestamps();
         });

@@ -23,6 +23,7 @@ class MotorcycleRentFactory extends Factory
             'transmisi' => $this->faker->randomElement(['Auto', 'Manually']),
             'engine_displacement' => $this->faker->numberBetween(100, 200) . ' CC',
             'fuel_capacity' => $this->faker->numberBetween(3, 10) . ' L',
+            'type' => $this->faker->randomElement(['Vehicle', 'Clothes'])
         ];
     }
 }
