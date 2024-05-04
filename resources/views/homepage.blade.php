@@ -1,7 +1,6 @@
 <x-app-layout>
     {{-- kategori search --}}
-    <section class="pt-24 flex justify-end pe-10 gap-4 items-center">
-        <span>Filter By Category</span>
+    <section class="pt-24 flex justify-end pe-10">
         <x-input-search-home />
     </section>
 
