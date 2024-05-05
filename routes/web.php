@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class);
 Route::get('/landingpage', HomeController::class)->name('landingpage');
 Route::get('/dashboard', HomeController::class)->name('landingpage');
-
+Route::get('/deskripsi', [ContentController::class,'deskripsi'])->name('deskripsi');
+Route::get('/AboutUs',[ContentController::class,'AboutUs'])->name('AboutUs');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
