@@ -24,6 +24,8 @@ Route::get('/landingpage', HomeController::class)->name('landingpage');
 Route::get('/dashboard', HomeController::class)->name('landingpage');
 Route::get('/deskripsi', [ContentController::class,'deskripsi'])->name('deskripsi');
 Route::get('/AboutUs',[ContentController::class,'AboutUs'])->name('AboutUs');
+Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
