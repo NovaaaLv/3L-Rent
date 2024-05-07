@@ -4,7 +4,7 @@
             data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="w-320 h-48 overflow-hidden rounded-xl">
                 {{-- <img src="{{ $post->image_mobil }}" alt="" class="w-full "> --}}
-                <img src="{{ asset('storage/images/heromobil.png') }}" alt="">
+                <img src="{{ asset('storage/images/kirill.jpg') }}" alt="">
             </div>
             <div class="flex flex-col gap-2">
                 {{-- <span class="text-xl font-bold">{{ $post->nama_mobil }}</span> --}}

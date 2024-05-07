@@ -27,6 +27,8 @@
                     </div>
                 @endforeach --}}
                 <x-posts.trending-rent />
+                <x-posts.trending-rent />
+                <x-posts.trending-rent />
             </div>
         </div>
     </section>
@@ -57,8 +59,8 @@
     </section>
 
     <section class="py-16 flex justify-center gap-20">
-        <div class="h-[600px] overflow-hidden w-[365px]">
-            <img src="{{ asset('storage/images/heromobil.png') }}" alt=""
+        <div class="h-[550px] overflow-hidden w-[365px] rounded-xl">
+            <img src="{{ asset('storage/images/coolen.jpg') }}" alt=""
                 class="w-[100%] h-[100%] object-cover object-center">
         </div>
         <div class="w-135">
@@ -75,7 +77,7 @@
                 directly. Enjoy our services in the comfort of your own vacation.</span>
             <div class="max-w-[600px] h-72">
                 <img src="{{ asset('storage/images/heromobil.png') }}" alt=""
-                    class="w-[100%] h-[100%] object-cover object-center">
+                    class="w-[100%] h-[100%] object-cover object-center rounded-2xl">
             </div>
             <span
                 class="text-center flex justify-center items-center py-4 text-lg font-medium text-font_color_primary">Yes,
@@ -112,13 +114,15 @@
                     </div>
                 @endforeach --}}
                 <x-posts.car-post />
+                <x-posts.car-post />
+                <x-posts.car-post />
             </div>
         </div>
         {{-- motorcyle --}}
         <div class="pb-8 flex flex-col justify-center">
             <div class="text-start ps-40">
                 <span
-                    class="text-font_color_primary text-3xl  font-medium border-b pe-10 border-gray-900">Motorcyle</span>
+                    class="text-font_color_primary text-3xl  font-medium border-b pe-10 border-gray-900">Motorcycle</span>
             </div>
 
             <div class="flex flex-wrap gap-6 justify-center pb-10 pt-5 items-center">
@@ -128,6 +132,8 @@
                         <x-posts.trending-rent :post="$post" />
                     </div>
                 @endforeach --}}
+                <x-posts.trending-rent />
+                <x-posts.trending-rent />
                 <x-posts.trending-rent />
             </div>
         </div>
