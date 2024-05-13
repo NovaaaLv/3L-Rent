@@ -13,9 +13,6 @@
     <div class="flex gap-5 items-center" id="nav-right">
         <div class="flex gap-6">
             <x-nav-link href="{{ route('landingpage') }}" :active="request()->routeIs('landingpage')">
-                {{ __('Land') }}
-            </x-nav-link>
-            <x-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
                 {{ __('Home') }}
             </x-nav-link>
         </div>

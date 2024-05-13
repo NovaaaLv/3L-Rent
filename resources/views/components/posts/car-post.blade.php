@@ -1,4 +1,4 @@
-<div onclick="window.location='{{ route('detail') }}'">
+<div onclick="window.location='{{ route('detail') }}'" class="hover:cursor-pointer">
     <div class="hover:bg-slate-300 transition-all ease-in-out duration-500 rounded-xl">
         <div class="text-smn text-text_desk con-tainer flex-wrap flex items-center justify-center p-3 bg-transparent gap-2"
             data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">

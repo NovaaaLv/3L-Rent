@@ -33,7 +33,7 @@
         </div>
     </section>
 
-    <section class="bg-[#1F4867] flex justify-center gap-10 px-8 py-20">
+    <section class="bg-[#1F4867] flex justify-center gap-10 px-8 py-20 flex-wrap">
         {{-- foreach ($promote as $key => $promo) --}}
         {{-- if ($key == 0) --}}
         {{-- Gambar pertama --}}
@@ -42,7 +42,7 @@
             <img src="{{ asset('storage/images/heromobil.png') }}" alt="">
         </div>
         {{-- elseif ($key == 1) --}}
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 flex-wrap">
             {{-- Gambar kedua dan ketiga --}}
             <div class="w-96 h-27 overflow-hidden rounded-2xl">
                 {{-- <img src="{{ $promo->promote_image }}" alt=""> --}}
@@ -58,7 +58,7 @@
         {{-- endforeach --}}
     </section>
 
-    <section class="py-16 flex justify-center gap-20">
+    <section class="py-16 flex justify-center gap-20 flex-wrap">
         <div class="h-[550px] overflow-hidden w-[365px] rounded-xl">
             <img src="{{ asset('storage/images/coolen.jpg') }}" alt=""
                 class="w-[100%] h-[100%] object-cover object-center">
@@ -97,45 +97,78 @@
     </section>
 
     <section class="bg-white flex justify-center flex-col">
-        {{-- car --}}
-        <div class="pt-14 pb-8 flex flex-col justify-center">
-            <div class="flex justify-center px-20" data-aos="fade-up" data-aos-duration="1000">
-                <span class="text-font_color_primary text-4xl  font-bold opacity-85">Our Rent Product</span>
-            </div>
-            <div class="text-start ps-40">
-                <span class="text-font_color_primary text-3xl  font-medium border-b pe-10 border-gray-900">Car</span>
-            </div>
-
-            <div class="flex flex-wrap gap-3 justify-center pb-10 pt-5 items-center">
-                {{-- untuk nanti jika sudah ada database --}}
-                {{-- @foreach ($postMobil > take(3) as $post)
-                    <div class="">
-                        <x-posts.trending-rent :post="$post" />
-                    </div>
-                @endforeach --}}
-                <x-posts.car-post />
-                <x-posts.car-post />
-                <x-posts.car-post />
+        {{-- Car --}}
+        <div class="flex justify-center overflow-hidden flex-wrap responsive-car py-5">
+            <div class="flex flex-col">
+                <div class="flex justify-between items-center">
+                    <span class="text-font_color_primary text-3xl font-medium ms-3 border-b pe-10 pb-2">Car</span>
+                    <a href="{{ route('homepage') }} "
+                        class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
+                        More</a>
+                </div>
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                </div>
             </div>
         </div>
+
         {{-- motorcyle --}}
-        <div class="pb-8 flex flex-col justify-center">
-            <div class="text-start ps-40">
-                <span
-                    class="text-font_color_primary text-3xl  font-medium border-b pe-10 border-gray-900">Motorcycle</span>
-            </div>
-
-            <div class="flex flex-wrap gap-6 justify-center pb-10 pt-5 items-center">
-                {{-- untuk nanti jika sudah ada database --}}
-                {{-- @foreach ($postMobil > take(3) as $post)
-                    <div class="">
-                        <x-posts.trending-rent :post="$post" />
-                    </div>
-                @endforeach --}}
-                <x-posts.trending-rent />
-                <x-posts.trending-rent />
-                <x-posts.trending-rent />
+        <div class="flex justify-center overflow-hidden flex-wrap responsive-car py-5">
+            <div class="flex flex-col">
+                <div class="flex justify-between items-center">
+                    <span class="text-font_color_primary text-3xl font-medium ms-3 border-b pe-10 pb-2">Motorcyle</span>
+                    <a
+                        class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
+                        More</a>
+                </div>
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                </div>
             </div>
         </div>
+
+        {{-- Clothes --}}
+        <div class="flex justify-center overflow-hidden flex-wrap responsive-car py-5 pb-2">
+            <div class="flex flex-col">
+                <div class="flex justify-between items-center">
+                    <span class="text-font_color_primary text-3xl font-medium ms-3 border-b pe-10">Clothing</span>
+                    <a
+                        class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
+                        More</a>
+                </div>
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                    <x-posts.car-post />
+                </div>
+            </div>
+        </div>
+
     </section>
 </x-app-layout>
+
+<style>
+    .responsive-car {}
+
+    @media screen and (max-width: 800px) {
+        .responsive-car {
+            justify-content: start;
+        }
+    }
+</style>
