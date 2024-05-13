@@ -22,16 +22,16 @@
             @auth
                 {{-- Jika Sudah Login --}}
                 <div class="">
-                    <a href="" wire:navigate class="py-1 px-5 bg-sky-900 rounded-2xl">Contact We !</a>
+                    <a href="" wire:navigate class="py-2 px-5 bg-sky-900 rounded-2xl">Contact We !</a>
                 </div>
-
+                <x-store/>
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button
                                     class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover"
+                                    <img class="size-12 rounded-full object-cover"
                                         src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
@@ -96,6 +96,7 @@
             @endauth
         </div>
     </div>
+    @livewireStyles
     <style>
     .Nav{
         display: flex;
@@ -117,6 +118,8 @@
         background-color:#26577C;
     }
     </style>
+    @livewireScripts
+    
     <script>
     const Navigation = document.querySelector('.Nav');
     window.addEventListener('scroll',()=>{

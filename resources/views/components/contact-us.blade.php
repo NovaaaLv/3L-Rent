@@ -8,7 +8,7 @@
                 possimus repellendus doloremque nobis
                 odio aspernatur? Nesciunt ratione minus dolore, vel assumenda temporibus, vero dignissimos veritatis
                 quis amet, iusto aut quibusdam?</span>
-            <button class="bg-sky-600 px-5 py-2 text-white">Contact Us</button>
+            <button class="bg-sky-600 px-5 py-2 text-white rounded-xl">Contact Us</button>
         </div>
     </div>
 </section>

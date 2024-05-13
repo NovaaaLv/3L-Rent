@@ -14,7 +14,6 @@
                     Aja !</span>
             </span>
         </div>
-
         <div class="py-16 flex flex-col justify-center">
             <div class="flex justify-center px-20" data-aos="fade-up" data-aos-duration="1000">
                 <span class="text-font_color_primary text-4xl  font-bold opacity-85">Paling Populer !</span>
