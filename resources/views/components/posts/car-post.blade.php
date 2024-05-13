@@ -1,14 +1,15 @@
-<div class="">
+<div onclick="window.location='{{ route('detail') }}'">
     <div class="hover:bg-slate-300 transition-all ease-in-out duration-500 rounded-xl">
-        <div class="text-smn text-text_desk w-365 flex-wrap flex items-center justify-center py-4 bg-transparent gap-2"
+        <div class="text-smn text-text_desk con-tainer flex-wrap flex items-center justify-center p-3 bg-transparent gap-2"
             data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <div class="w-320 h-48 overflow-hidden rounded-xl">
+            <div class="w-320 overflow-hidden rounded-xl">
                 {{-- <img src="{{ $post->image_mobil }}" alt="" class="w-full "> --}}
                 <img src="{{ asset('storage/images/heromobil.png') }}" alt="">
             </div>
             <div class="flex flex-col gap-2">
                 {{-- <span class="text-xl font-bold">{{ $post->nama_mobil }}</span> --}}
-                <div class="flex flex-wrap gap-x-7 gap-y-3 items-center bg-transparent max-w-72">
+                <span class="text-xl font-bold">TESLA</span>
+                <div class="flex flex-wrap gap-y-2 gap-x-2 items-center bg-transparent con-tainer-card-bottom">
                     <div class="flex gap-1">
                         <div class="w-6">
                             <img src="{{ asset('storage/icons/icons-mobil/seat.svg') }}" alt="" class="w-full">
@@ -62,3 +63,24 @@
         </div>
     </div>
 </div>
+
+
+<style>
+    .con-tainer {
+        width: 250px;
+    }
+
+    .con-tainer-card-bottom {
+        max-width: 18rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        .con-tainer {
+            width: 400px;
+        }
+
+        .con-tainer-card-bottom {
+            max-width: 300px;
+        }
+    }
+</style>

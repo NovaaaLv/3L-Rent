@@ -41,6 +41,7 @@
         </main>
 
         @include('layouts.partials.footer')
+        @yield('footer-detail')
     </div>
 
     @stack('modals')

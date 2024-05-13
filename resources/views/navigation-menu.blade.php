@@ -1,5 +1,7 @@
-<nav
-    class="{{ request()->routeIs('profile.show')? :'' }}Nav">
+{{-- <nav
+    class="{{ request()->routeIs('profile.show') ? 'otherClass' : 'Nav' }} {{ request()->routeIs('profile.show') ? 'otherClass' : 'Nav2' }}"> --}}
+<nav class="{{ request()->routeIs('landingpage') ? 'Nav' : 'Nav2' }}">
+
     <div class="flex items-center gap-4 ml-16">
         <div class="w-48">
             <x-application-logo />
@@ -8,7 +10,7 @@
             <x-input-search />
         </div>
     </div>
-    <div class="{{ request()->routeIs('profile.show') ? '' : '' }}flex gap-5 items-center" id="nav-right">
+    <div class="flex gap-5 items-center" id="nav-right">
         <div class="flex gap-6">
             <x-nav-link href="{{ route('landingpage') }}" :active="request()->routeIs('landingpage')">
                 {{ __('Land') }}
@@ -20,11 +22,9 @@
 
         <div class="flex gap-2 items-center">
             @auth
-                {{-- Jika Sudah Login --}}
                 <div class="">
-                    <a href="" wire:navigate class="py-1 px-5 bg-sky-900 rounded-2xl">Contact We !</a>
+                    <a href="" class="py-1 px-5 bg-sky-900 rounded-2xl">Contact We!</a>
                 </div>
-
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -56,7 +56,7 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}" wire:navigate>
+                            <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
@@ -80,51 +80,62 @@
                     </x-dropdown>
                 </div>
             @else
-                {{-- Jika Belum Login --}}
                 <div class="flex gap-3 mr-16">
-                    <div class="flex items-center bg-sky-900 rounded-xl hover:bg-sky-950 hover:duration-300 hover:ease-in">
-                        <a href="{{ url('/register') }}"class="py-2 px-4 flex items-center gap-2">
-                            Register
-                        </a>
-                    </div>
-                    <div class="flex items-center bg-slate-50 text-sky-900 rounded-xl w-20 justify-center hover:bg-gray-800 hover:duration-300 hover:ease-in hover:text-gray-50">
-                        <a href="{{ url('/login') }}" class="py-2 px-4 flex items-center gap-2">
-                            Login
-                        </a>
-                    </div>
+                    <a href="{{ url('/register') }}"
+                        class="py-2 px-4 flex items-center gap-2 bg-sky-900 rounded-xl hover:bg-sky-950 hover:duration-300 hover:ease-in">Register</a>
+                    <a href="{{ url('/login') }}"
+                        class="py-2 px-4 flex items-center gap-2 bg-slate-50 text-sky-900 rounded-xl w-20 justify-center hover:bg-gray-800 hover:duration-300 hover:ease-in hover:text-gray-50">Login</a>
                 </div>
             @endauth
         </div>
     </div>
     <style>
-    .Nav{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        color: #f9fafb;
-        background-color: transparent;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        transition: background-color 0.4s ease-in-out;
-    }
-    .Nav-Scrolled{
-        background-color:#26577C;
-    }
-    </style>
-    <script>
-    const Navigation = document.querySelector('.Nav');
-    window.addEventListener('scroll',()=>{
-        if(window.scrollY >50){
-            Navigation.classList.add('Nav-Scrolled');
-        }else if(window.scrollY <=50){
-            Navigation.classList.remove('Nav-Scrolled');
+        .Nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            color: #f9fafb;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.4s ease-in-out;
         }
-    })
-    </script>
+
+        .Nav-Scrolled {
+            background-color: #26577C;
+        }
+
+        .Nav2 {
+            background: #26577C;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            color: #f9fafb;
+        }
+    </style>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const Navigation = document.querySelector('.Nav');
+        console.log('Nav element:', Navigation); // Debug: memastikan elemen ini ada
+
+        function updateNavOnScroll() {
+            if (window.scrollY > 50) {
+                Navigation && Navigation.classList.add('Nav-Scrolled');
+            } else {
+                Navigation && Navigation.classList.remove('Nav-Scrolled');
+            }
+        }
+        window.addEventListener('scroll', updateNavOnScroll);
+        updateNavOnScroll(); // Memanggil fungsi ini untuk memastikan kelas ditambahkan sesuai scroll saat load
+    });
+</script>

@@ -15,4 +15,8 @@ class HomeController extends Controller
     {
         return view('homepage');
     }
+    public function detail()
+    {
+        return view('detail');
+    }
 }

@@ -106,7 +106,7 @@
                 <span class="text-font_color_primary text-3xl  font-medium border-b pe-10 border-gray-900">Car</span>
             </div>
 
-            <div class="flex flex-wrap gap-6 justify-center pb-10 pt-5 items-center">
+            <div class="flex flex-wrap gap-3 justify-center pb-10 pt-5 items-center">
                 {{-- untuk nanti jika sudah ada database --}}
                 {{-- @foreach ($postMobil > take(3) as $post)
                     <div class="">
