@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class);
 Route::get('/landingpage', HomeController::class)->name('landingpage');
 Route::get('/dashboard', HomeController::class)->name('landingpage');
-Route::get('/deskripsi', [ContentController::class,'deskripsi'])->name('deskripsi');
-Route::get('/AboutUs',[ContentController::class,'AboutUs'])->name('AboutUs');
+Route::get('/deskripsi', [ContentController::class, 'deskripsi'])->name('deskripsi');
+Route::get('/AboutUs', [ContentController::class, 'AboutUs'])->name('AboutUs');
 Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
+Route::get('/detail', [HomeController::class, 'detail'])->name('detail');
 
 Route::middleware([
     'auth:sanctum',
