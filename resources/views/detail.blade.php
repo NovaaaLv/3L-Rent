@@ -148,7 +148,7 @@
             <div class="flex gap-5">
                 <a href="">Deskripsi</a>
                 <a href="">Ulasan</a>
-                <a href="">Diskusi</a>
+                <a href="">Rekomendasi</a>
             </div>
             <div class="flex gap-2">
                 <span>--</span>
