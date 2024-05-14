@@ -106,7 +106,7 @@
                         class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
                         More</a>
                 </div>
-                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3 scrollbar-none">
                     <x-posts.car-post />
                     <x-posts.car-post />
                     <x-posts.car-post />
@@ -127,7 +127,7 @@
                         class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
                         More</a>
                 </div>
-                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3 scrollbar-none">
                     <x-posts.car-post />
                     <x-posts.car-post />
                     <x-posts.car-post />
@@ -148,7 +148,7 @@
                         class="text-font_color_primary text-sm font-semibold border px-5 py-1 rounded-lg hover:cursor-pointer">See
                         More</a>
                 </div>
-                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3">
+                <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3  scrollbar-none">
                     <x-posts.car-post />
                     <x-posts.car-post />
                     <x-posts.car-post />

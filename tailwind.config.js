@@ -53,5 +53,6 @@ export default {
 
     plugins: [
         forms,
-        typography],
+        typography,
+        require('tailwind-scrollbar'),],
 };
