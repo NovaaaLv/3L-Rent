@@ -17,7 +17,6 @@ return new class extends Migration
             $table->bigInteger('price');
             $table->string('car_image');
             $table->integer('seat');
-            $table->integer('car_trunk');
             $table->string('transmisi');
             $table->string('fuel');
             $table->string('insurance');

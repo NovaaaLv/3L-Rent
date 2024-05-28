@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,9 @@ Route::get('/deskripsi', [ContentController::class, 'deskripsi'])->name('deskrip
 Route::get('/AboutUs', [ContentController::class, 'AboutUs'])->name('AboutUs');
 Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
 Route::get('/detail', [HomeController::class, 'detail'])->name('detail');
+Route::get('/test', [HomeController::class, 'test'])->name('test');
+
+Route::get('/insert', [CompanyController::class, 'insert'])->name('insert');
 
 Route::middleware([
     'auth:sanctum',

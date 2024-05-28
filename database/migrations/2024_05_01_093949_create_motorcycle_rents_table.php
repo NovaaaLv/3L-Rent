@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('price');
             $table->string('motorcycle_image');
             $table->string('transmisi');
-            $table->string('engine_displacement');
+            $table->integer('engine_displacement');
             // cc
-            $table->string('fuel_capacity');
+            $table->decimal('fuel_capacity');
             $table->string('type');
+            $table->integer('popularity');
             // nanti ditambahkan fasilitas beda table
             $table->timestamps();
         });

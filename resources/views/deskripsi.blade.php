@@ -1,5 +1,3 @@
-
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
     <body class="" style="background: #edf2f7">
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>

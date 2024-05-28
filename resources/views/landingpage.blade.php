@@ -128,13 +128,12 @@
                         More</a>
                 </div>
                 <div class="flex gap-3 max-w-[1200px] overflow-x-scroll py-3 scrollbar-none">
-                    <x-posts.car-post />
-                    <x-posts.car-post />
-                    <x-posts.car-post />
-                    <x-posts.car-post />
-                    <x-posts.car-post />
-                    <x-posts.car-post />
-                    <x-posts.car-post />
+                    <x-posts.motorcyle-post />
+                    <x-posts.motorcyle-post />
+                    <x-posts.motorcyle-post />
+                    <x-posts.motorcyle-post />
+                    <x-posts.motorcyle-post />
+                    <x-posts.motorcyle-post />
                 </div>
             </div>
         </div>

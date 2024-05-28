@@ -15,6 +15,9 @@
             <x-nav-link href="{{ route('landingpage') }}" :active="request()->routeIs('landingpage')">
                 {{ __('Home') }}
             </x-nav-link>
+            <x-nav-link href="{{ route('insert') }}" :active="request()->routeIs('insert')">
+                {{ __('Insert') }}
+            </x-nav-link>
         </div>
 
         <div class="flex gap-2 items-center">
