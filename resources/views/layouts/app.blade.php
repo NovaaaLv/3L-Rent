@@ -15,7 +15,6 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     <!-- Styles -->
     @livewireStyles
 </head>
@@ -47,5 +46,5 @@
 
     @livewireScripts
 </body>
-
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-clientt-key="{{env('MIDTRANS_CLIET_KEY')}}"></script>
 </html>

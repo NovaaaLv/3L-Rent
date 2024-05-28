@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/deskripsi', [ContentController::class,'deskripsi'])->name('deskrips
 Route::get('/AboutUs',[ContentController::class,'AboutUs'])->name('AboutUs');
 Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
 Route::get('/cart',[ContentController::class,'cartpage'])->name('cartpage');
+Route::get('/admin',[AdminController::class,'admin'])->name('admin');
 
 Route::middleware([
     'auth:sanctum',

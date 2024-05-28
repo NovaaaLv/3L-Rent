@@ -1,7 +1,7 @@
 <x-app-layout>
-    <section class="justify-center items-center flex justify-items-center my-8">
+    <section class="justify-between items-center flex  m-8">
         <div class="mt-16 bg-gray-100 w-[60rem] h-60 flex items-center rounded-xl overflow-hidden">
-            <button class="bg-slate-300 h-full w-16 items-center justify-center hover:bg-sky-700 hover:ease-in duration-300">
+            <button class="bg-slate-300 h-full w-12 items-center justify-center hover:bg-sky-700 hover:ease-in duration-300">
             <img src="{{ asset('storage/icons/icons-cart/market.png') }}" class="size-6 ml-2"/>
             </button>
             {{-- <div class="flex gap-4"> <h1 class="ml-6 font-bold text-right max-h-60 max-w-24 mt-8"> Motor Supra </h1>
@@ -12,17 +12,21 @@
             </div>
             </div> --}}
 
-            <div class=" w-screen">
-                <div class="flex justify-between p-16">
-                    <div class="flex flex-col text-right">
+            <div class="w-full">
+                <div class="flex justify-between p-16 gap-2">
+                    <div class="flex flex-col gap-y-4 my-4">
                         <span class="font-bold text-2xl">Motor Supra</span>
-                        <span>Deskripsi ini tentang motor dan mobil atau apapun itu</span>
+                        <span class="max-w-[30rem]">Deskripsi ini tentang motor dan mobil atau apapun itu 
+                        NGENTOOOOOOOOOOOT memek kontol astaga amskdsadksamdkasmddmaskd soakddosadksoamd 
+                         sksdsakdalsadlsd sdaskdsad</span>
+                        <span class="font-bold text-xl">Harga : 5.000.000</span>
                     </div>
-                    <div class="rounded-lg overflow-hidden">
-                        <img src="{{asset('storage/images/harley.jpg')}}" class="w-[23rem] h-48 rounded-sm">
+                    <div class="rounded-lg overflow-hidden w-[20rem] h-[13rem] my-4">
+                        <img src="{{asset('storage/images/harley.jpg')}}">
                     </div>
                 </div>
             </div>
+            <div class="snap-container"></div>
         </div>
     </section>
  </x-app-layout>
