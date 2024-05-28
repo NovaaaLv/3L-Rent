@@ -89,7 +89,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap gap-6 justify-center pb-5 pt-5 items-center max-w-[1200px]">
+        <div
+            class="flex flex-wrap gap-6 justify-center pb-5 pt-5 items-center max-w[900px] overflow-auto scrollbar-none">
             {{-- untuk nanti jika sudah ada database --}} {{-- @foreach ($postMobil > take(3) as $post)
             <div class="">
                 <x-posts.trending-rent :post="$post" />
