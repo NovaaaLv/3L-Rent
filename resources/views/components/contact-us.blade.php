@@ -1,5 +1,5 @@
 <section class="contactUs my-5">
-    <div class="flex pt-28 ps-36">
+    <div class="flex pt-28 justify-end pe-10">
         <div class="bg-white w-[40rem] px-9 pt-9 pb-5 rounded-lg">
             <p class="text-3xl font-medium">Our Rental</p>
             <span class="text-font_color_primary flex text-left py-2">Lorem ipsum dolor sit amet consectetur
@@ -16,7 +16,7 @@
 <style>
     .contactUs {
         width: 100%;
-        height: 30rem;
+        min-height: 30rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

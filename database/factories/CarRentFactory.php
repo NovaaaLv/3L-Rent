@@ -21,7 +21,6 @@ class CarRentFactory extends Factory
             'price' => $this->faker->numberBetween($min = 100000, $max = 1000000),
             'car_image' => $this->faker->imageUrl(),
             'seat' => $this->faker->numberBetween(1, 5),
-            'car_trunk' => $this->faker->numberBetween(1, 2),
             'transmisi' => $this->faker->randomElement(['Auto', 'Manually']),
             'fuel' => $this->faker->randomElement(['Bensin', 'Solar', 'Bio Solar', 'Pertamax', 'Pertalite']),
             'insurance' => $this->faker->boolean() ? 'Ya' : 'Tidak',

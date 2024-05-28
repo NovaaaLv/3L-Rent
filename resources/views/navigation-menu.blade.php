@@ -13,9 +13,6 @@
     <div class="flex gap-5 items-center" id="nav-right">
         <div class="flex gap-6">
             <x-nav-link href="{{ route('landingpage') }}" :active="request()->routeIs('landingpage')">
-                {{ __('Land') }}
-            </x-nav-link>
-            <x-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
                 {{ __('Home') }}
             </x-nav-link>
         </div>
@@ -124,13 +121,13 @@
         }
     </style>
     <script>
-    const Navigation = document.querySelector('.Nav');
-    window.addEventListener('scroll',()=>{
-        if(window.scrollY >50){
-            Navigation.classList.add('Nav-Scrolled');
-        }else if(window.scrollY <=50){
-            Navigation.classList.remove('Nav-Scrolled');
-        }
-    })
+        const Navigation = document.querySelector('.Nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                Navigation.classList.add('Nav-Scrolled');
+            } else if (window.scrollY <= 50) {
+                Navigation.classList.remove('Nav-Scrolled');
+            }
+        })
     </script>
 </nav>
