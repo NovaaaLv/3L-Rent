@@ -15,23 +15,21 @@
             <x-nav-link href="{{ route('landingpage') }}" :active="request()->routeIs('landingpage')">
                 {{ __('Home') }}
             </x-nav-link>
-            <x-nav-link href="{{ route('insert') }}" :active="request()->routeIs('insert')">
-                {{ __('Insert') }}
-            </x-nav-link>
         </div>
 
         <div class="flex gap-2 items-center">
             @auth
                 <div class="">
-                    <a href="" class="py-1 px-5 bg-sky-900 rounded-2xl">Contact We!</a>
+                    <a href="" wire:navigate class="py-2 px-5 bg-sky-900 rounded-2xl">Contact We !</a>
                 </div>
+
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button
                                     class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover"
+                                    <img class="size-12 rounded-full object-cover"
                                         src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
@@ -89,6 +87,7 @@
             @endauth
         </div>
     </div>
+    @livewireStyles
     <style>
         .Nav {
             display: flex;
@@ -121,21 +120,14 @@
             color: #f9fafb;
         }
     </style>
-</nav>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <script>
         const Navigation = document.querySelector('.Nav');
-        console.log('Nav element:', Navigation); // Debug: memastikan elemen ini ada
-
-        function updateNavOnScroll() {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                Navigation && Navigation.classList.add('Nav-Scrolled');
-            } else {
-                Navigation && Navigation.classList.remove('Nav-Scrolled');
+                Navigation.classList.add('Nav-Scrolled');
+            } else if (window.scrollY <= 50) {
+                Navigation.classList.remove('Nav-Scrolled');
             }
-        }
-        window.addEventListener('scroll', updateNavOnScroll);
-        updateNavOnScroll(); // Memanggil fungsi ini untuk memastikan kelas ditambahkan sesuai scroll saat load
-    });
-</script>
+        })
+    </script>
+</nav>

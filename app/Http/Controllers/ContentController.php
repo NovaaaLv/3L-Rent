@@ -12,4 +12,7 @@ class ContentController extends Controller
     public function AboutUs(){
         return view('cardpage');
     }
+    public function cartpage(){
+        return view('cartpage');
+    }
 }

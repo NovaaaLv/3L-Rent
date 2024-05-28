@@ -12,7 +12,7 @@
             {{-- TRENDING TRANSPORTATION SECTION --}}
             <div class="flex justify-center gap-5 pt-2">
                 <div class="w-[500px] h-auto">
-                    <img src="{{ asset('storage/images/heromobil.png') }}" alt="" class="w-full">
+                    <img src="{{ asset('storage/images/heromobil.png') }}" alt="" class="w-full rounded-xl">
                 </div>
                 <div class="pb-2">
                     <p class="text-3xl font-bold text-gray-800">Corvette</p>
