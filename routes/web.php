@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,12 @@ Route::get('/dashboard', HomeController::class)->name('landingpage');
 Route::get('/deskripsi', [ContentController::class, 'deskripsi'])->name('deskripsi');
 Route::get('/AboutUs', [ContentController::class, 'AboutUs'])->name('AboutUs');
 Route::get('/homepage', [HomeController::class, 'homepage'])->name('homepage');
+<<<<<<< HEAD
 Route::get('/detail', [HomeController::class, 'detail'])->name('detail');
+=======
+Route::get('/cart',[ContentController::class,'cartpage'])->name('cartpage');
+Route::get('/admin',[AdminController::class,'admin'])->name('admin');
+>>>>>>> Fabian
 
 Route::middleware([
     'auth:sanctum',
