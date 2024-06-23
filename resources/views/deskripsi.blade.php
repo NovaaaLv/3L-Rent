@@ -119,5 +119,6 @@
             </main>
 
         </div>
+        
     </body>
 @include('layouts.partials.footer')

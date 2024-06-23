@@ -13,4 +13,3 @@ class Transaction extends Model{
         'snap_token',
     ];
 }
-?>

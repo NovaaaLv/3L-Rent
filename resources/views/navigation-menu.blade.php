@@ -20,6 +20,11 @@
         <div class="flex gap-2 items-center">
             @auth
                 <div class="">
+                    <x-nav-link href="{{ route('cartpage') }}" :active="request()->routeIs('cartpage')">
+                {{ __('Cart') }}
+            </x-nav-link>
+                </div>
+                 <div class="">
                     <a href="" wire:navigate class="py-2 px-5 bg-sky-900 rounded-2xl">Contact We !</a>
                 </div>
 
@@ -28,8 +33,8 @@
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button
-                                    class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="size-12 rounded-full object-cover"
+                                    class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition mr-16">
+                                    <img class="size-10 rounded-full object-cover"
                                         src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
@@ -94,7 +99,7 @@
             justify-content: space-between;
             padding: 0.75rem 1.25rem;
             color: #f9fafb;
-            background-color: transparent;
+            background-color: #26577C;
             position: fixed;
             top: 0;
             left: 0;
@@ -120,14 +125,4 @@
             color: #f9fafb;
         }
     </style>
-    <script>
-        const Navigation = document.querySelector('.Nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                Navigation.classList.add('Nav-Scrolled');
-            } else if (window.scrollY <= 50) {
-                Navigation.classList.remove('Nav-Scrolled');
-            }
-        })
-    </script>
 </nav>
